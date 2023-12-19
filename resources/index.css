@@ -1,0 +1,120 @@
+body {
+    background-color: #f9fafc;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9fafc;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header-container h1 {
+    padding-left: 20px;
+    font-family: "Roboto Condensed";
+    color: #ff91af;
+}
+
+.nav-container li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav-container a {
+    padding: 10px;
+    text-decoration: none;
+    color: #ff91af;
+    font-weight: bolder;
+    font-family: "Roboto Condensed";
+}
+
+.main {
+    height: 725px;
+    background-image: url(./images/background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: #f9fafc;
+    font-family: "Roboto Condensed";
+    line-height: 40px;
+    margin-bottom: 100px;
+}
+
+.main h1 {
+    padding-top: 250px;
+    font-size: 100px;
+}
+
+.main a {
+    background-color:#ff91af;
+    color:#f9fafc;
+    text-decoration: none;
+    padding: 15px 50px;
+    border-radius: 5px;
+    font-family: "Roboto Condensed";
+}
+
+.about {
+    font-family: "Barlow Semi Condensed";
+    margin: 0 10px;
+    padding-top: 100px;
+}
+
+.about p {
+    font-size: 25px;
+    line-height: 50px;
+    text-align: left;
+    padding-top: 50px;
+}
+
+.about img {
+    float: right;
+    padding-right: 25px;
+    border-radius: 50%;
+}
+
+#gallery {
+    padding-top: 20px;
+}
+
+
+#gallery h2 {
+    text-align: center;
+    margin-top: 300px;
+    font-family: "Roboto Condensed";
+    text-decoration: underline;
+}
+.gallery {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.gallery-img {
+    margin: 20px 5px;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+#contact {
+    padding-top: 350px;
+}
+
+footer {
+    background-color: #ff91af;
+    position: absolute;
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 50px 0;
+    font-family: "Roboto Condensed";
+}
