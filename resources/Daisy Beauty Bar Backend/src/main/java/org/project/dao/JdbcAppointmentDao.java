@@ -23,7 +23,7 @@ public class JdbcAppointmentDao implements AppointmentDao{
     @Override
     public Appointment getAppointmentById(int appointmentId) {
         Appointment appointment = null;
-        String sql = "SELECT id, date, time, client_id, service_id " +
+        String sql = "SELECT * " +
                      "FROM appointment " +
                      "WHERE id = ?;";
         try {
@@ -42,8 +42,7 @@ public class JdbcAppointmentDao implements AppointmentDao{
     @Override
     public Appointment getAppointmentByDate(String date) {
         Appointment appointment = null;
-        String sql = "SELECT id, date, time, client_id, service_id " +
-                "FROM appointment " +
+        String sql = "SELECT * FROM appointment " +
                 "WHERE date = ?;";
         try {
             SqlRowSet results = jdbcTemplate.queryForRowSet(sql, date);
@@ -61,8 +60,7 @@ public class JdbcAppointmentDao implements AppointmentDao{
     @Override
     public List<Appointment> getAppointments() {
         List<Appointment> appointments = new ArrayList<>();
-        String sql = "SELECT id, date, time, client_id, service_id " +
-                "FROM appointment;";
+        String sql = "SELECT * FROM appointment;";
         try {
             SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
             while (results.next()) {
@@ -78,7 +76,7 @@ public class JdbcAppointmentDao implements AppointmentDao{
     }
 
     @Override
-    public Appointment creatAppointment(Appointment newAppointment) {
+    public Appointment createAppointment(Appointment newAppointment) {
         Appointment appointment = null;
         String sql = "INSERT INTO appointment (date, time, client_id, service_id) " +
                 "VALUES (?, ?, ?, ?) RETURNING id;";

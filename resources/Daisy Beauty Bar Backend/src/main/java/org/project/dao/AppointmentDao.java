@@ -15,7 +15,7 @@ public interface AppointmentDao {
     List<Appointment> getAppointments();
 
     // creates appointment
-    Appointment creatAppointment(Appointment appointment);
+    Appointment createAppointment(Appointment appointment);
 
     // updates appointment
     Appointment updateAppointment(Appointment appointment);
