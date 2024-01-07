@@ -111,8 +111,8 @@ public class JdbcAppointmentDao implements AppointmentDao{
     @Override
     public int cancelAppointmentById(int appointmentId) {
         int numberOfRows = 0;
-
         String sql = "DELETE FROM appointment WHERE id = ?;";
+
 
         try {
             numberOfRows = jdbcTemplate.update(sql, appointmentId);
